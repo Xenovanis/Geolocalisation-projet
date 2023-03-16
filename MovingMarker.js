@@ -299,6 +299,19 @@ L.Marker.MovingMarker = L.Marker.extend({
     }
 });
 
+
+
+let mycustomIcon = {
+    iconUrl:"bus.png",
+    iconSize: [100,100]
+}
+
+let mybusIcon = L.icon(mycustomIcon);
+
+let myiconOptions={
+    title :"EST bus",
+    icon:mybusIcon
+}
 L.Marker.movingMarker = function (latlngs, duration, options) {
-    return new L.Marker.MovingMarker(latlngs, duration, options);
+    return new L.Marker.MovingMarker(latlngs, duration, myiconOptions);
 };
